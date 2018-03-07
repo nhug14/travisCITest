@@ -3,7 +3,7 @@ compiler:
 
 language: c
 
-install: make
+install:
   make
 
 notifications:
