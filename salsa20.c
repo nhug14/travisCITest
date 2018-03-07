@@ -2,6 +2,7 @@
 #include <stddef.h>
 #include "salsa20.h"
 
+
 // Implements DJB's definition of '<<<'
 static uint32_t rotl(uint32_t value, int shift)
 {
