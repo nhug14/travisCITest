@@ -1,14 +1,18 @@
 compiler:
-  - clang
-  - gcc
+  clang
 
-install: make get-deps
-  ./configure && make && make test
+language: c
 
-language : c
+install: make
+  make
 
-before_install:
- - test -n $C && unset CC
+notifications:
+  email:	
+    recipients:	
+      nahugh2@tycho.nscs.mil
+
+    on_success:	always
+    on_failure: always
 
 
 
