@@ -2,6 +2,8 @@ before_install:
   - wget https://saw.galois.com/builds/nightly/saw-0.2-2018-03-12-CentOS7-64.tar.gz
   - tar -xvzf saw-0.2-2018-03-12-CentOS7-64.tar.gz
   - export PATH=$PATH:$PWD/saw-0.2-2018-03-12-CentOS7-64/bin/
+  - chmod a+x install_z3_yices.sh
+  - mkdir z3
   - install_z3_yices.sh z3 
   - export PATH=$PATH:$PWD/z3  
 
