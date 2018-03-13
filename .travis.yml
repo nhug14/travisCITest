@@ -2,9 +2,7 @@ before_install:
   - wget https://saw.galois.com/builds/nightly/saw-0.2-2018-03-12-CentOS7-64.tar.gz
   - tar -xvzf saw-0.2-2018-03-12-CentOS7-64.tar.gz
   - export PATH=$PATH:$PWD/saw-0.2-2018-03-12-CentOS7-64/bin/
-  - wget https://raw.githubusercontent.com/Z3Prover/bin/master/releases/z3-4.6.0-x64-ubuntu-16.04.zip
-  - unzip z3-4.6.0-x64-ubuntu-16.04.zip
-  - export PATH=$PATH:$PWD/z3-4.6.0-x64-ubuntu-16.04/bin
+  - apt-get install z3
 
 compiler:
   clang
