@@ -5,7 +5,7 @@ before_install:
   - ls -ltra
   - echo "$PWD"
   - mkdir z3
-  - ./install_z3_yices.sh z3 
+  - ./install_z3_yices.sh "$(mktemp -d)" z3 
   - export PATH=$PATH:$PWD/z3  
 
 compiler:
