@@ -1,4 +1,4 @@
-import "Salsa20.cry";
+import "salsa20.cry";
 
 let quarterround_setup : LLVMSetup() = do {
     llvm_ptr "y0" (llvm_int 32);
