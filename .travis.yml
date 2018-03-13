@@ -1,13 +1,13 @@
 sudo: required
 
 before_install:
-  - wget https://saw.galois.com/builds/nightly/saw-0.2-2018-03-12-CentOS7-64.tar.gz
-  - tar -xvzf saw-0.2-2018-03-12-CentOS7-64.tar.gz
-  - export PATH=$PATH:$PWD/saw-0.2-2018-03-12-CentOS7-64/bin/
+#  - wget https://saw.galois.com/builds/nightly/saw-0.2-2018-03-12-CentOS7-64.tar.gz
+#  - tar -xvzf saw-0.2-2018-03-12-CentOS7-64.tar.gz
+#  - export PATH=$PATH:$PWD/saw-0.2-2018-03-12-CentOS7-64/bin/
   - sudo ./install_z3_yices.sh "$(mktemp -d)" z3bin 
   - export PATH=$PATH:$PWD/z3bin  
   - sudo ./install_saw.sh "$(mktemp -d)" sawbin
-  export PATH=$PATH:$PWD/sawbin
+  - export PATH=$PATH:$PWD/sawbin
 
 compiler:
   clang
