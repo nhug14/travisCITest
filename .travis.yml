@@ -3,7 +3,7 @@ compiler:
 
 language: c
 
-script: make
+script: make saw
 
 notifications:
   email:	
