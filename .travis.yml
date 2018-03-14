@@ -14,7 +14,7 @@ matrix:
             - llvm-toolchain-trusty-4.0
           packages:
             - clang-4.0
-            - z3
+            - z3-4.4.0-2
       env:
         - MATRIX_EVAL="wget https://saw.galois.com/builds/nightly/saw-0.2-2018-03-12-CentOS7-64.tar.gz && tar -xvzf saw-0.2-2018-03-12-CentOS7-64.tar.gz && export PATH=$PATH:$PWD/saw-0.2-2018-03-12-CentOS7-64/bin/"
     - os: osx
