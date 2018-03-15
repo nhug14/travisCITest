@@ -14,7 +14,7 @@ matrix:
             - sourceline: "deb http://ftp.us.debian.org/debian main"
             - llvm-toolchain-trusty-4.0
           packages:
-            - clang-4.0
+            - clang
             - z3
       env:
         - MATRIX_EVAL="wget https://saw.galois.com/builds/nightly/saw-0.2-2018-03-12-CentOS7-64.tar.gz && tar -xvzf saw-0.2-2018-03-12-CentOS7-64.tar.gz && export PATH=\\$PATH:\\$PWD/saw-0.2-2018-03-12-CentOS7-64/bin/"
