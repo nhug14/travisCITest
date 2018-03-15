@@ -11,7 +11,7 @@ matrix:
       addons:
         apt:
           sources:
-            - sourceline: "deb http://ftp.us.debian.org/debian main"
+#            - sourceline: "deb http://ftp.us.debian.org/debian stretch"
             - llvm-toolchain-trusty-4.0
           packages:
             - clang-4.0
