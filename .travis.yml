@@ -11,13 +11,13 @@ matrix:
       addons:
         apt:
           sources:
-#            - sourceline: "deb http://ftp.us.debian.org/debian stretch"
+            - sourceline: "deb http://ftp.us.debian.org/debian stretch"
             - llvm-toolchain-trusty-4.0
           packages:
             - clang-4.0
-#            - z3
+            - z3
       env:
-        - MATRIX_EVAL="wget https://saw.galois.com/builds/nightly/saw-0.2-2018-03-12-CentOS7-64.tar.gz && tar -xvzf saw-0.2-2018-03-12-CentOS7-64.tar.gz && export PATH=\$PATH:\$PWD/saw-0.2-2018-03-12-CentOS7-64/bin/ && ./install_z3_yices.sh \\$(mktemp -d) \\$PWD/z3bin && export PATH=\\$PATH:\\$PWD/z3bin/bin"
+        - MATRIX_EVAL="wget https://saw.galois.com/builds/nightly/saw-0.2-2018-03-12-CentOS7-64.tar.gz && tar -xvzf saw-0.2-2018-03-12-CentOS7-64.tar.gz && export PATH=\$PATH:\$PWD/saw-0.2-2018-03-12-CentOS7-64/bin/"
 
     - os: osx
       osx_image: xcode9.2
