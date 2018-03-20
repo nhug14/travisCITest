@@ -15,12 +15,11 @@ matrix:
           packages:
             - clang-4.0
       env:
-        - MATRIX_EVAL= "wget https://saw.galois.com/builds/nightly/saw-0.2-2018-03-12-CentOS7-64.tar.gz && tar -xvzf saw-0.2-2018-03-12-CentOS7-64.tar.gz && export PATH=$PATH:$PWD/saw-0.2-2018-03-12-CentOS7-64/bin/ && ./install_z3_yices.sh $(mktemp -d) $PWD/z3bin && export PATH=$PATH:$PWD/z3bin/bin"
-
+        - MATRIX_EVAL="wget https://saw.galois.com/builds/nightly/saw-0.2-2018-03-12-CentOS7-64.tar.gz && tar -xvzf saw-0.2-2018-03-12-CentOS7-64.tar.gz && export PATH=\$PATH:\$PWD/saw-0.2-2018-03-12-CentOS7-64/bin/ && ./install_z3_yices.sh \$(mktemp -d) \$PWD/z3bin && export PATH=\$PATH:\$PWD/z3bin/bin"
     - os: osx
-      osx_image: xcode9.2
+      osx_image: xcode9
       env:
-        - MATRIX_EVAL="brew update && brew install z3"
+        - MATRIX_EVAL="brew upgrade && brew install gcc && CC=gcc-7 && CXX=g++-7 && brew install z3"
 
 script: make saw
 
