@@ -20,7 +20,7 @@ matrix:
     - os: osx
       osx_image: xcode9
       env:
-        - MATRIX_EVAL="brew upgrade && brew install ruby-build && brew install rbenv && rbenv install 2.3 && rbenv global 2.3 && brew install gcc && CC=gcc-7 && CXX=g++-7 && brew install z3"
+        - MATRIX_EVAL="brew install gcc && CC=gcc-7 && CXX=g++-7 && brew install z3"
 
 script: make saw
 
